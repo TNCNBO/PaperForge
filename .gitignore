@@ -50,9 +50,11 @@ inputs/
 rag_storage/
 examples/input/
 examples/output/
-paperforge_lab/agent_folders
-paperforge_lab/papers/
 docs/
+
+# PaperForge Lab - ignore all generated content but keep the directory structure
+paperforge_lab/*
+!paperforge_lab/.gitkeep
 
 # Miscellaneous
 .DS_Store
