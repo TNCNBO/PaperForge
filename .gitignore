@@ -50,7 +50,6 @@ inputs/
 rag_storage/
 examples/input/
 examples/output/
-docs/
 
 # PaperForge Lab - ignore all generated content but keep the directory structure
 paperforge_lab/*
