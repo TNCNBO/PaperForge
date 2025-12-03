@@ -1,0 +1,93 @@
+# Dataset Configuration File
+# Defines dataset-specific parameters for the MediVision model
+
+# General Settings
+default:
+  input_size: 224  # Standard input size for medical images
+  num_classes: 10  # Default number of classes
+  batch_size: 32   # Default batch size
+  shuffle: True    # Whether to shuffle data
+  num_workers: 4   # Number of data loading workers
+
+# Dataset-Specific Settings
+datasets:
+  alzheimer:
+    path: "data/alzheimer"
+    num_classes: 3
+    batch_size: 32
+    shuffle: True
+    augmentation: True
+
+  breast_ultrasound:
+    path: "data/breast_ultrasound"
+    num_classes: 2
+    batch_size: 32
+    shuffle: True
+    augmentation: True
+
+  blood_cell:
+    path: "data/blood_cell"
+    num_classes: 4
+    batch_size: 32
+    shuffle: True
+    augmentation: True
+
+  chest_xray:
+    path: "data/chest_xray"
+    num_classes: 2
+    batch_size: 32
+    shuffle: True
+    augmentation: True
+
+  chest_ct:
+    path: "data/chest_ct"
+    num_classes: 2
+    batch_size: 32
+    shuffle: True
+    augmentation: True
+
+  diabetic_retinopathy:
+    path: "data/diabetic_retinopathy"
+    num_classes: 5
+    batch_size: 32
+    shuffle: True
+    augmentation: True
+
+  kidney_diseases:
+    path: "data/kidney_diseases"
+    num_classes: 3
+    batch_size: 32
+    shuffle: True
+    augmentation: True
+
+  bone_fracture:
+    path: "data/bone_fracture"
+    num_classes: 2
+    batch_size: 32
+    shuffle: True
+    augmentation: True
+
+  retinal_oct:
+    path: "data/retinal_oct"
+    num_classes: 4
+    batch_size: 32
+    shuffle: True
+    augmentation: True
+
+  brain_tumor:
+    path: "data/brain_tumor"
+    num_classes: 3
+    batch_size: 32
+    shuffle: True
+    augmentation: True
+
+# Data Splitting
+split:
+  train: 0.7
+  val: 0.15
+  test: 0.15
+
+# Normalization Parameters
+normalization:
+  mean: [0.485, 0.456, 0.406]  # ImageNet mean
+  std: [0.229, 0.224, 0.225]   # ImageNet std

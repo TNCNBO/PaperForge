@@ -1,0 +1,56 @@
+[project]
+name = "paperforge"
+version = "1.0.8"
+description = "PaperForge: Transform research papers into working code automatically"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "PaperForge Team", email = ""},
+]
+keywords = ["ai", "research", "code-generation", "multi-agent", "paper-to-code"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+]
+
+dependencies = [
+    "aiofiles>=0.8.0",
+    "aiohttp>=3.8.0",
+    "anthropic",
+    "asyncio-mqtt",
+    "docling",
+    "google-genai",
+    "mcp==1.19.0",
+    "mcp-agent==0.2.4",
+    "mcp-server-git",
+    "nest_asyncio",
+    "openai",
+    "pathlib2",
+    "PyPDF2>=2.0.0",
+    "reportlab>=3.5.0",
+    "streamlit",
+]
+
+[project.urls]
+Homepage = "https://github.com/HKUDS/PaperForge"
+Documentation = "https://github.com/HKUDS/PaperForge"
+Repository = "https://github.com/HKUDS/PaperForge"
+Issues = "https://github.com/HKUDS/PaperForge/issues"
+
+[project.scripts]
+paperforge = "paperforge:main"
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["ui", "cli", "workflows", "tools", "utils", "config", "prompts", "schema"]
+
+[tool.uv]
+dev-dependencies = []
